@@ -1,6 +1,6 @@
 # Email Generator
 
-Static HTML email generator based on Eleventy, webpack, Babel, and PostCSS
+Static HTML email generator based on Electron, Eleventy, webpack, Babel, and PostCSS
 
 - `package.json` - Points to the app's main file and lists its details and dependencies.
 - `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.

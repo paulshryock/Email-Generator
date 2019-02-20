@@ -1,7 +1,7 @@
 {
   "name": "email-generator",
   "version": "0.1.0",
-  "description": "Static HTML email generator based on Eleventy, webpack, Babel, and PostCSS",
+  "description": "Static HTML email generator based on Electron, Eleventy, webpack, Babel, and PostCSS",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
