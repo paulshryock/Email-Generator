@@ -4,13 +4,32 @@
   "description": "Static HTML email generator based on Eleventy, webpack, Babel, and PostCSS",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "11ty": "npx webpack; npx eleventy",
+    "serve": "npx webpack; npx eleventy --serve",
+    "watch": "npx webpack; npx eleventy --watch",
+    "debug": "npx webpack; DEBUG=* npx eleventy",
+    "debug-serve": "npx webpack; DEBUG=* npx eleventy --serve",
+    "debug-watch": "npx webpack; DEBUG=* npx eleventy --watch",
+    "prepack": "if [ -e src/css ]; then rm -R src/css; fi; if [ -e src/fonts ]; then rm -R src/fonts; fi; if [ -e src/js ]; then rm -R src/js; fi",
+    "clean": "if [ -e _site ]; then rm -R _site; fi",
+    "development": "npm run-script prepack; npx webpack; npm run-script clean; ELEVENTY_ENV=development npx eleventy --serve",
+    "staging": "npm run-script prepack; npx webpack; npm run-script clean; ELEVENTY_ENV=staging npx eleventy",
+    "production": "npm run-script prepack; npx webpack; npm run-script clean; ELEVENTY_ENV=production npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulshryock/Email-Generator.git"
   },
   "author": {
     "name": "Paul Shryock",
     "email": "paul@pshry.com",
     "url": "https://pshry.com/"
   },
+  "bugs": {
+    "url": "https://github.com/paulshryock/Email-Generator/issues"
+  },
+  "homepage": "https://github.com/paulshryock/Email-Generator#readme",
   "devDependencies": {
     "electron": "^4.0.4"
   }
