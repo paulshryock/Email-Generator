@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/paulshryock/Email-Generator#readme",
   "devDependencies": {
-    "electron": "^4.0.4"
+    "electron": "^9.1.0"
   }
 }
